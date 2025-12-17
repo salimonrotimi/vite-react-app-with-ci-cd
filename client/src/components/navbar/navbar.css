@@ -1,0 +1,35 @@
+.navbar{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 100%;
+    max-width: 1400px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.navbar-home-div{
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.navbar-home-div img {
+    display: flex;
+}
+
+.navbar-menu-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-login, .navbar-register, .navbar-logout {
+    margin-right: 25px;
+    color: white;
+    text-decoration: none;
+}

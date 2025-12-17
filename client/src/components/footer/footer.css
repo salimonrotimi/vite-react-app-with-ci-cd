@@ -1,0 +1,22 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1400px;
+    height: 45px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+@media (max-width: 700px){ 
+    .footer {
+        position: absolute;
+        bottom: -80px;;
+    }
+}

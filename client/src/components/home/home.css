@@ -1,0 +1,117 @@
+.home {
+    margin: 6% auto 0;
+    padding: 0 30px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.home-greetings{
+    padding: 30px 0;
+    border-radius: 20px; 
+    width: 300px   
+}
+
+.home-greetings h1{
+    text-transform: uppercase;
+}
+
+.home-greetings p{
+    font-size: 18px;
+}
+
+.home-register-field {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    border-radius: 20px;
+}
+.home-register-field div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+}
+
+.home-register-field h3 {
+    margin: -5px 0;
+    text-align: center;
+}
+
+.home-register-field div input, .home-register-field div select {
+    width: 92%;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0 8px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.home-register-field div select {
+    margin: 0;
+    width: 100%
+}
+
+.home-register-field div button {
+    width: 100px;
+    height: 30px;
+    margin: 14px auto 0;
+    font-size: 17px;
+    border-radius: 4px;
+    border: none;
+    transition: all 1s ease-in-out 0.5s;
+}
+
+.home-register-field div button:hover {
+    background-color: #7FC6F9FF;
+    transform: scale(105%);
+}
+
+
+@media (max-width: 900px){
+    .home {
+        gap: 90px;
+    }
+}
+
+@media (max-width: 780px){
+    .home {
+        gap: 70px;
+    }
+}
+
+@media (max-width: 700px){ 
+    .home {   
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .home-greetings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-greetings p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 440px){ 
+    .home-register-field {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+}

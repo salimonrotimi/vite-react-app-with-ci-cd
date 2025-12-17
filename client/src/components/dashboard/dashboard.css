@@ -1,0 +1,17 @@
+.dashboard{
+    margin: 20px;
+}
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    font-weight: bold;    
+}
+.header-color{
+    color: #F1C0C4FF;
+}
+.dashboard-grid div {
+    margin: 20px 0;
+    font-weight: 600;
+    color: white;
+}
