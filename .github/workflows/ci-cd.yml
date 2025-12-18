@@ -1,0 +1,48 @@
+# The filepath is .github/workflows/ci-cd.yml
+
+name: build-and-lint-testing
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+# Defines multiple jobs. The first job is "build-and-lint" and it is the CI part
+jobs:  
+  build-and-lint:
+    name: Client and Server CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+      
+      - name: Install backend dependencies
+        working-directory: server
+        run: npm ci
+
+      - name: Run eslint for backend
+        working-directory: server
+        run: npm run lint -- --max-warnings=0
+
+      - name: Install frontend dependencies
+        working-directory: client
+        run: npm ci
+      
+      - name: Run eslint for frontend
+        working-directory: client
+        run: npm run lint -- --max-warnings=0
+
+      - name: Build backend docker image from Dockerfile
+        run: docker build -t backend-image ./server
+
+      - name: Build frontend docker image from Dockerfile
+        run: docker build -t frontend-image ./client
