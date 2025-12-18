@@ -31,7 +31,7 @@ jobs:
 
       - name: Run eslint for backend
         working-directory: server
-        run: npm run lint -- --max-warning=0
+        run: npm run lint -- --max-warnings=0
 
       - name: Install frontend dependencies
         working-directory: client
