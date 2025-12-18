@@ -39,7 +39,7 @@ jobs:
       
       - name: Run eslint for frontend
         working-directory: client
-        run: npm run lint -- --max-warning=0
+        run: npm run lint -- --max-warnings=0
 
       - name: Build backend docker image from Dockerfile
         run: docker build -t backend-image ./server
