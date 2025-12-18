@@ -19,5 +19,6 @@ router.get('/', getAllUsers);
 router.post('/register', registerUser);
 router.post('/login', loginUser);
 
+console.log('Hello world');
 
 module.exports = router;
