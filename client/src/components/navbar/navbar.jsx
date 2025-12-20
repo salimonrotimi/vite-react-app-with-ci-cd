@@ -22,7 +22,7 @@ function Navbar() {
          : <>
              {location.pathname === '/login'
               ? <span>
-                  <Link to="/" className='navbar-register'>Register Now</Link>
+                  <Link to="/" className='navbar-register'>Register</Link>
                 </span>
               : <>                  
                   {location.pathname === '/dashboard'
