@@ -9,13 +9,14 @@ services:
     ports:
       - "4000:4000"
 
-  # Frontend service
+  # Frontend service. It does not need "env_file" because "args" has been specified
   frontend:
-    build: ./client
+    build:
+      context: ./client
+      args: 
+        VITE_API_URL: http://16.171.12.11:4000/api
     container_name: frontend-container
     restart: always
-    env_file:
-      - ./client/.env
     ports:
       - "5173:5173"
     depends_on:
