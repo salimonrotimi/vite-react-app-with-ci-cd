@@ -47,7 +47,8 @@ jobs:
       - name: Build frontend docker image from Dockerfile
         run: docker build -t frontend-image ./client
   
-  # The second job is "deploy" and it is the CD part
+  # The second job is "deploy" and it is the CD part. It runs if on "push" or "pull_request and merged".
+  # The command "set -e" tells the shell to exit the script or stop execution if any command gives an error.
 
   deploy:
     name: Deploy to production CD
