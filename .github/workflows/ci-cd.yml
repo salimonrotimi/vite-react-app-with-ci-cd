@@ -1,4 +1,6 @@
 # The filepath is .github/workflows/ci-cd.yml
+# Three branches are used in the repository of this project namely: main, dev, and work.
+# The "push" and "pull_request" branches can also be set to only main i.e. branches: [main] as one feels like
 
 name: build-and-lint-testing
 
