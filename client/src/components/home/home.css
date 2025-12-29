@@ -120,4 +120,14 @@
     .home-register-field {
         background-color: rgba(255, 255, 255, 0.4);
     }
+
+    .home-register-field div input, .home-register-field div select {
+        background-color: black;
+        color: #c3c3c3;
+    }
+
+    .home-register-field div button {
+        background-color: white;
+        color: black;
+    }
 }
