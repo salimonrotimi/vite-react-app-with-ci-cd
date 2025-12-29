@@ -106,13 +106,13 @@
     }
 
     .login-field {
-        margin: -20px auto;
+        margin: -20px auto 20px;
     }
 }
 
 @media (max-width: 440px){ 
     .login-field {
         width: 70%;
-        margin-bottom: 40px;
+        margin: -20px 0 40px;
     }
 }
