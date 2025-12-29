@@ -9,7 +9,7 @@ services:
     ports:
       - "4000:4000"
 
-  # Frontend service. It does not need "env_file" because "args" has been specified
+  # Frontend service. Using "env_file" does not work. Use "args" to specify environment variables 
   frontend:
     build:
       context: ./client
